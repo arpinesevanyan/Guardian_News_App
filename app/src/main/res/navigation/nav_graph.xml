@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/contentNewsFragment">
+
+    <fragment
+        android:id="@+id/contentNewsFragment"
+        android:name="com.arpinesevanyan.guardiannewsapp.ui.contentnews.ContentNewsFragment"
+        android:label="fragment_contentNews"
+        tools:layout="@layout/fragment_content_news">
+
+    </fragment>
+    <action
+        android:id="@+id/action_contentNewsFragment_to_detailsFragment"
+        app:destination="@id/detailsFragment" />
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.arpinesevanyan.guardiannewsapp.ui.details.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="newsResult"
+            app:argType="com.arpinesevanyan.guardian.news.data.NewsResultDto"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.arpinesevanyan.guardiannewsapp.ui.favorite.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+
+</navigation>
