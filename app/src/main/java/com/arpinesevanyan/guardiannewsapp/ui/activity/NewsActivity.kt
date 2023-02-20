@@ -2,7 +2,7 @@ package com.arpinesevanyan.guardiannewsapp.ui.activity
 
 import android.os.Bundle
 import android.view.View
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.arpinesevanyan.common.base.BaseCommonActivity
 import com.arpinesevanyan.guardian.favorite.BaseFavoriteViewModel
@@ -10,6 +10,7 @@ import com.arpinesevanyan.guardiannewsapp.R
 import com.arpinesevanyan.guardiannewsapp.databinding.ActivityNewsBinding
 import org.koin.androidx.scope.lifecycleScope
 import org.koin.androidx.viewmodel.scope.viewModel
+
 
 class NewsActivity : BaseCommonActivity() {
     private lateinit var binding: ActivityNewsBinding
@@ -20,7 +21,14 @@ class NewsActivity : BaseCommonActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityNewsBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.bottomNavigationView.setupWithNavController(this.findNavController(R.id.navHostFragment))
 
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
+        val navController = navHostFragment.navController
+        binding.bottomNavigationView.setupWithNavController(navController)
     }
 }
+
+
+
+

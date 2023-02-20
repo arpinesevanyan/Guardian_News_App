@@ -11,7 +11,6 @@ import com.arpinesevanyan.guardian.news.data.NewsResultDto
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-
 open class BaseFavoriteViewModel(private val repository: FavoriteNewsRepository) :
     BaseCommonViewModel() {
 

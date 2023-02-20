@@ -40,6 +40,7 @@ dependencies {
 
     //Room
     api roomDependencies.values()
+    kapt "androidx.room:room-compiler:2.5.0"
 
     //Core
     api coreDependencies.values()

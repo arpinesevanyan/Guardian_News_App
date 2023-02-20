@@ -26,6 +26,9 @@ android {
         freeCompilerArgs += "-Xjvm-default=all"
     }
 
+    configurations {
+        implementation.exclude group: 'org.jetbrains', module: 'annotations'
+    }
     buildTypes {
         release {
             minifyEnabled false

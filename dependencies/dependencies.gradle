@@ -46,7 +46,7 @@ ext {
             "googlePlayCoreVersion"          : '1.7.3',
 
             // Room
-            "roomVersion"                    : '2.4.2'
+            "roomVersion"                    : '2.5.0'
 
     ]
 
