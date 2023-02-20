@@ -38,27 +38,3 @@ sealed class Resource<T>(
     class Error<T>(message: String, data: T? = null) : Resource<T>(data, message)
     class Loading<T> : Resource<T>()
 }
-
-
-// TUTORIAL
-
-fun usage() {
-    val fakeResponse = "json object from code beauty"
-
-    //testWithGenerics(fakeResponse)
-    //val parsedResult = Gson().fromJson(jsonResponse, T::class.java)
-    val parsedInlinedResult = Gson().fromJson(fakeResponse, Response::class.java)
-}
-
-fun test() {
-    val fakeResponse = "json object from code beauty"
-    val a = Gson().fromJson(fakeResponse, Response::class.java)
-}
-
-inline fun <reified T> testWithGenerics(jsonResponse: String): T {
-    return Gson().fromJson(jsonResponse, T::class.java)
-}
-
-data class Response(val cars: List<Car>)
-
-data class Car(val year: Int, val name: String)

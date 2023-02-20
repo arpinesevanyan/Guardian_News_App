@@ -2,9 +2,9 @@ ext {
     versionOfName = '1.0'
     versionOfCode = 1
 
-    versionOfCompileSdk = 32
+    versionOfCompileSdk = 33
     versionOfMinSdk = 24
-    versionOfTargetSdk = 32
+    versionOfTargetSdk = 33
     versionOfBuildTools = '30.0.2'
 
     versions = [
@@ -79,7 +79,7 @@ ext {
     ]
 
     glideDependencies = [
-            glide                            : "com.github.bumptech.glide:glide:${versions.glideVersion}"
+            glide                            : "com.github.bumptech.glide:glide:${versions.glideVersion}",
     ]
 
     recyclerviewDependencies = [
