@@ -10,14 +10,14 @@ import retrofit2.http.Url
 
 interface NewsApi {
 
-    @Headers("api-key:c4e8c6de-cdfa-42a9-a87d-ef9835041f5a")
+    @Headers("api-key:ac45ed13-75bb-418f-b2fe-8aad1cf4ae15")
     @GET("search?")
     fun getContentNews(
         @Query("page-size") pageNumber: Int,
         @Query("show-fields") showFields: String
     ): Call<ContentNewsDto>
 
-    @Headers("api-key:c4e8c6de-cdfa-42a9-a87d-ef9835041f5a")
+    @Headers("api-key:ac45ed13-75bb-418f-b2fe-8aad1cf4ae15")
     @GET
     fun getNewsDetails(
         @Url url: String,
