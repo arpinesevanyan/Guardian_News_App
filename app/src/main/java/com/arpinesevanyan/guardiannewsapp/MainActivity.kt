@@ -8,7 +8,6 @@ import androidx.appcompat.widget.AppCompatButton
 import com.arpinesevanyan.guardiannewsapp.databinding.ActivityMainBinding
 import com.arpinesevanyan.guardiannewsapp.ui.activity.NewsActivity
 
-
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
